@@ -7,7 +7,6 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import Root from './routes/root';
 import ErrorPage from './error-page';
 import Menu from "./routes/Menu";
 
@@ -15,7 +14,7 @@ import Menu from "./routes/Menu";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Root/>,
+    element: <Menu/>,
     errorElement: <ErrorPage/>
   },
 ]);
@@ -24,7 +23,6 @@ const router = createBrowserRouter([
 function App() {
   return (
     <React.StrictMode>
-      <Menu/>
 
     <RouterProvider router={router} />
   </React.StrictMode>

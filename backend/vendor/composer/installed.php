@@ -1,15 +1,24 @@
 <?php return array(
     'root' => array(
-        'name' => 'symfony/skeleton',
-        'pretty_version' => 'v6.4.99',
-        'version' => '6.4.99.0',
-        'reference' => NULL,
+        'name' => '__root__',
+        'pretty_version' => 'dev-main',
+        'version' => 'dev-main',
+        'reference' => '1397d2552c2cc6ec1f4c6523aeca29b9993af0e5',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
         'dev' => true,
     ),
     'versions' => array(
+        '__root__' => array(
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
+            'reference' => '1397d2552c2cc6ec1f4c6523aeca29b9993af0e5',
+            'type' => 'project',
+            'install_path' => __DIR__ . '/../../',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
         'psr/cache' => array(
             'pretty_version' => '3.0.0',
             'version' => '3.0.0.0',
@@ -23,6 +32,21 @@
             'dev_requirement' => false,
             'provided' => array(
                 0 => '2.0|3.0',
+            ),
+        ),
+        'psr/clock' => array(
+            'pretty_version' => '1.0.0',
+            'version' => '1.0.0.0',
+            'reference' => 'e41a24703d4560fd0acb709162f73b8adfc3aa0d',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../psr/clock',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'psr/clock-implementation' => array(
+            'dev_requirement' => false,
+            'provided' => array(
+                0 => '1.0',
             ),
         ),
         'psr/container' => array(
@@ -99,6 +123,15 @@
             'provided' => array(
                 0 => '1.1|2.0|3.0',
             ),
+        ),
+        'symfony/clock' => array(
+            'pretty_version' => 'v6.4.7',
+            'version' => '6.4.7.0',
+            'reference' => '83667074bdae743f8cd884ac50b266d2af287ea8',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../symfony/clock',
+            'aliases' => array(),
+            'dev_requirement' => false,
         ),
         'symfony/config' => array(
             'pretty_version' => 'v6.4.7',
@@ -232,6 +265,15 @@
             'aliases' => array(),
             'dev_requirement' => false,
         ),
+        'symfony/password-hasher' => array(
+            'pretty_version' => 'v6.4.7',
+            'version' => '6.4.7.0',
+            'reference' => '73afaed1d87f6127dcd71bc88e9a16fd9325cf1c',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../symfony/password-hasher',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
         'symfony/polyfill-ctype' => array(
             'dev_requirement' => false,
             'replaced' => array(
@@ -319,6 +361,24 @@
             'aliases' => array(),
             'dev_requirement' => false,
         ),
+        'symfony/property-access' => array(
+            'pretty_version' => 'v6.4.7',
+            'version' => '6.4.7.0',
+            'reference' => '9174e2ec62563dfc15fbe84d1618613092e09d91',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../symfony/property-access',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'symfony/property-info' => array(
+            'pretty_version' => 'v6.4.7',
+            'version' => '6.4.7.0',
+            'reference' => '42778ca731b8796e02e237008f4ed871361ddfce',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../symfony/property-info',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
         'symfony/routing' => array(
             'pretty_version' => 'v6.4.7',
             'version' => '6.4.7.0',
@@ -337,6 +397,42 @@
             'aliases' => array(),
             'dev_requirement' => false,
         ),
+        'symfony/security-bundle' => array(
+            'pretty_version' => 'v6.4.7',
+            'version' => '6.4.7.0',
+            'reference' => 'c9112933215b9b3c48851eb6644263d5c9d93245',
+            'type' => 'symfony-bundle',
+            'install_path' => __DIR__ . '/../symfony/security-bundle',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'symfony/security-core' => array(
+            'pretty_version' => 'v6.4.7',
+            'version' => '6.4.7.0',
+            'reference' => '54d35e432abd5c86bf7ba97e521168d364ac50b0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../symfony/security-core',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'symfony/security-csrf' => array(
+            'pretty_version' => 'v6.4.7',
+            'version' => '6.4.7.0',
+            'reference' => '91fe7e829a8fe1e78bd3615c7a410dce6876325b',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../symfony/security-csrf',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'symfony/security-http' => array(
+            'pretty_version' => 'v6.4.7',
+            'version' => '6.4.7.0',
+            'reference' => '01643fd75e415bc463d63e86bb27afccf5477745',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../symfony/security-http',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
         'symfony/service-contracts' => array(
             'pretty_version' => 'v3.5.0',
             'version' => '3.5.0.0',
@@ -351,15 +447,6 @@
             'provided' => array(
                 0 => '1.1|2.0|3.0',
             ),
-        ),
-        'symfony/skeleton' => array(
-            'pretty_version' => 'v6.4.99',
-            'version' => '6.4.99.0',
-            'reference' => NULL,
-            'type' => 'project',
-            'install_path' => __DIR__ . '/../../',
-            'aliases' => array(),
-            'dev_requirement' => false,
         ),
         'symfony/string' => array(
             'pretty_version' => 'v6.4.7',
