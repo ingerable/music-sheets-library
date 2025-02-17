@@ -1,12 +1,10 @@
 name: songs-library
 
 services:
-  db:
-    image: mysql:8.4.0
-    env_files: .env
-    container_name: songs-library_db
-    restart: always
+  backend:
+    build: backend
+    ports:
+      - 80:80
     volumes:
-      - songs-library_db:/var/lib/mysql
-  frontend:
-    
+      -  ./backend:/var/www/html/
+

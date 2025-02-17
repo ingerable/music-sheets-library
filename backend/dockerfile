@@ -1,1 +1,35 @@
-FROM php:8.1-apache
+FROM php:8.2-apache
+
+
+
+COPY ./app /var/www/html/app/
+COPY ./config/local.conf /etc/apache2/sites-available/000-default.conf
+
+
+WORKDIR /var/www/html/app/
+
+#dependencies
+RUN apt-get update &&\
+    apt-get install curl
+
+
+
+RUN chown -R www-data:www-data /var/www/html/app
+RUN docker-php-ext-install pdo pdo_mysql
+RUN a2enmod rewrite
+
+RUN curl -sS https://get.symfony.com/cli/installer | bash &&\
+    mv /root/.symfony5/bin/symfony /usr/local/bin/symfony
+
+RUN curl -s https://getcomposer.org/installer | php &&\
+    mv composer.phar /usr/local/bin/composer
+
+RUN ls
+ENV COMPOSER_ALLOW_SUPERUSER=1
+RUN composer install
+ENV COMPOSER_ALLOW_SUPERUSER=0
+
+EXPOSE 80
+
+# Commande pour démarrer Apache
+CMD ["apache2-foreground"]
